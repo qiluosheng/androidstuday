@@ -49,16 +49,23 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-                vh vssh =(vh) holder;
-                int i=position*2;
-                vssh.getTv().setText("Item"+i);
+                vh vssh = (vh) holder;
+                if(position<data.length) {
+                    vssh.getTv().setText(data[position]);
+                }else {
+                    String i= Integer.toString(position);
+                    //int 转 string
+                    vssh.getTv().setText(i);
+                }
             }
 
             @Override
             //设置数量
             public int getItemCount() {
-                return 100;
+                return 450;
             }
+
+            private String[] data=new String[]{"HELLO","NI HAO","JIEKE","SOLO"};
         });
     }
 }
