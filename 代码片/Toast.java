@@ -1,0 +1,1 @@
+Toast.makeText(<activity.this>,<"tell">,Toast.LENGTH_SHORT/LONG)
