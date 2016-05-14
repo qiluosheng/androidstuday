@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         //设置contentView
 
         rv.setLayoutManager(new LinearLayoutManager(this));
+		//线性布局
+		//rv.setLayoutManager(new GridLayoutManager(this,3));
+		//表格布局 this,3列 默认垂直方向的
 
         rv.setAdapter(new RecyclerView.Adapter() {
         //Adapter是连接后端数据和前端显示的适配器接口
