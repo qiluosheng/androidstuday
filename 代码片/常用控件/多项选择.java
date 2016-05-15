@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         cb6= (CheckBox) findViewById(R.id.checkBox6);
 
 
+        //事件监听器，只要选择状态发生改变就纪录
         cb1.setOnCheckedChangeListener(this);
         cb2.setOnCheckedChangeListener(this);
         cb3.setOnCheckedChangeListener(this);
@@ -37,12 +38,14 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                button.setText("归0");
             }
         });
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        String str="你干哈？";
 
         if(cb1.isChecked()){
             str=str+cb1.getText()+",";
